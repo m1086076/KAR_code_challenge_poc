@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "6f048f51-8ed6-4045-a4d8-7e142c99e69e",
+		"name": "KAR_code_challenge_poc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Account details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_account/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_account",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit Amount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/deposit?account_number=6086000100000001&deposit_amount=100&remark=NA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deposit"
+					],
+					"query": [
+						{
+							"key": "account_number",
+							"value": "6086000100000001"
+						},
+						{
+							"key": "deposit_amount",
+							"value": "100"
+						},
+						{
+							"key": "remark",
+							"value": "NA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw Amount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/withdraw?account_number=6086000100000001&withdraw_amount=100&account_holder_name=Muhammad Nafees ansari &account_type=Investment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"withdraw"
+					],
+					"query": [
+						{
+							"key": "account_number",
+							"value": "6086000100000001"
+						},
+						{
+							"key": "withdraw_amount",
+							"value": "100"
+						},
+						{
+							"key": "account_holder_name",
+							"value": "Muhammad Nafees ansari "
+						},
+						{
+							"key": "account_type",
+							"value": "Investment"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Amount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transfer?dr_account_number=6086000100000001&transfer_amount=100&dr_account_holder_name=Muhammad Nafees ansari &dr_account_type=Investment&cr_account_number=6086000100000001&cr_account_type=dr_account_holder_name&cr_account_holder_name=Rohit sharma",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "dr_account_number",
+							"value": "6086000100000001"
+						},
+						{
+							"key": "transfer_amount",
+							"value": "100"
+						},
+						{
+							"key": "dr_account_holder_name",
+							"value": "Muhammad Nafees ansari "
+						},
+						{
+							"key": "dr_account_type",
+							"value": "Investment"
+						},
+						{
+							"key": "cr_account_number",
+							"value": "6086000100000001"
+						},
+						{
+							"key": "cr_account_type",
+							"value": "dr_account_holder_name"
+						},
+						{
+							"key": "cr_account_holder_name",
+							"value": "Rohit sharma"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
